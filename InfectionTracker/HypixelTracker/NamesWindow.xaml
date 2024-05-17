@@ -1,0 +1,32 @@
+﻿<Window
+    x:Class="HypixelTracker.NamesWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:HypixelTracker"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Infection Tracker"
+    Width="500"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid Margin="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <TextBlock Margin="0,0,0,5" TextWrapping="Wrap">
+                    <Run>Paste all player names you wish to track in this session. Only one name per line is supported! Everything else will not be based on UI and rather will run in the console and will just write tracking logs. Close this window to cancel.</Run>
+                </TextBlock>
+            </Grid>
+            <Grid Grid.Row="1">
+                <TextBox x:Name="textBox" TextWrapping="Wrap" AcceptsReturn="True" />
+            </Grid>
+            <Grid Grid.Row="2" Margin="0,5,0,0">
+                <Button Click="Button_Click">Start infection tracking</Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
